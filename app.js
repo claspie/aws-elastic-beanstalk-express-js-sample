@@ -2,7 +2,11 @@ const express = require('express');
 const app = express();
 const port = 8080;
 
-app.get('/', (req, res) => res.send('Test AWS deploy'));
+app.get('/', (req, res) => res.send({
+    name: "Test Nodejs App",
+    version: 1,
+    date: "December 07"
+}));
 
 app.listen(port);
 console.log(`App running on http://localhost:${port}`);
